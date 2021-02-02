@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/test_db
+    username: test_user
+    password: test_password
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show-sql: true
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate:
+      SQL: DEBUG
+      type: TRACE
+    org.springframework.security: DEBUG
